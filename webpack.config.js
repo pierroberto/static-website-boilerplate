@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const PrettierPlugin = require("prettier-webpack-plugin");
 module.exports = {
   module: {
     rules: [
@@ -33,6 +34,14 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
+    }),
+    new PrettierPlugin({
+      printWidth: 80,
+      tabWidth: 2,
+      useTabs: false,
+      semi: false,                   
+      encoding: 'utf-8',            
+      extensions: [ ".js" ]
     })
   ]
 };
