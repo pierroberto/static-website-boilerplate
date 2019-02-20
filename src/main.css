@@ -1,3 +1,7 @@
 body {
     background-color: #fff;
 }
+
+.in-view {
+    background-color: #000;
+}
