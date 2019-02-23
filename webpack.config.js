@@ -35,11 +35,22 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.(scss|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
-          "postcss-loader"
+          {
+            loader: "postcss-loader", 
+            options: {
+              plugins: function () { // post css plugins, can be exported to postcss.config.js
+                return [
+                  require('postcss-import'),
+                  require('postcss-cssnext')
+                ];
+              }
+            }
+          },
+          "sass-loader"
       ]
       },
       {

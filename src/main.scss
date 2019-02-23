@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP');
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Sans", "Noto Sans JP", serif;
+    background-color: #fff;
+}
+
+.in-view {
+    display: flex;
+    background-color: pink;
+}
+
+.hello {
+    height: 200px;
+    background: linear-gradient(to top, red 50%, blue 50%);
+    background-size: 100% 200%;
+    background-position:left top;
+}
+
+.hello:hover {
+    background: linear-gradient(to top, red 50%, blue 50%);;
+    transition: background 200ms linear;
+    background-size: 100% 200%;
+    background-position:left bottom;
+}
